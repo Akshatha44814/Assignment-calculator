@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Calculate Component Input negative number, show error message with -ve numbers 1`] = `
+<DocumentFragment>
+  <span
+    class="content colorContent"
+  >
+    Negative numbers not allowed :-1,-2
+  </span>
+</DocumentFragment>
+`;
+
+exports[`renders Calculate Component Negative string value should disable the calculate button 1`] = `
+<DocumentFragment>
+  <button
+    class="calculate"
+    disabled=""
+  >
+    Calculate
+  </button>
+</DocumentFragment>
+`;

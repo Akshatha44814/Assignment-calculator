@@ -1,16 +1,15 @@
 .conatiner {
-    background-color: white;
-    padding: 2%;
-    margin: 2%;
-    width: 500px;
-    border-radius: 2%;
-    box-shadow: 2px 2px 5px lightgray;
-  }
-  .colorContent {
-    color: red;
-  }
-  .content {
-    display: flex;
-    margin: 0%;
-  }
-  
+  background-color: white;
+  padding: 2%;
+  margin: 2%;
+  width: 500px;
+  border-radius: 2%;
+  box-shadow: 2px 2px 5px lightgray;
+}
+.colorContent {
+  color: red;
+}
+.content {
+  display: flex;
+  margin: 0%;
+}
