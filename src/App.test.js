@@ -18,4 +18,12 @@ describe("renders Calculate Component", () => {
     expect(asFragment()).toMatchSnapshot();
     expect(asFragment()).toBeTruthy();
   });
+  it("render Enter numbers label", () => {
+    const { asFragment } = render(<Calculator />);
+    const linkLabel = screen.getByText("Enter numbers");
+    expect(linkLabel).toBeInTheDocument();
+    expect(asFragment()).toHaveTextContent("Enter numbers");
+    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toBeTruthy();
+  });
 });

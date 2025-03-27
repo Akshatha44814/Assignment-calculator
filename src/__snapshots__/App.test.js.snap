@@ -1,5 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders Calculate Component render Enter numbers label 1`] = `
+<DocumentFragment>
+  <div
+    class="conatiner"
+  >
+    <h1>
+      String Calculator
+    </h1>
+    <p
+      class="content"
+    >
+      Enter numbers
+    </p>
+    <p
+      class="content"
+    >
+      (Format:
+      <span
+        class="colorContent"
+        data-testid="redColor"
+      >
+        //[delimiter]
+[numbers]
+      </span>
+      )
+    </p>
+    <div
+      class="conatinerPage"
+    >
+      <div>
+        <input
+          class="input"
+          placeholder="E.G.,//;\\\\n1;2;3 or 1,2,3"
+          type="text"
+        />
+      </div>
+      <button
+        class="calculate"
+      >
+        Calculate
+      </button>
+      <div
+        class="resultInput"
+      >
+        <input
+          class="input"
+          disabled=""
+          placeholder="Result Output"
+          type="text"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`renders Calculate Component render String Calculator header 1`] = `
 <DocumentFragment>
   <div
