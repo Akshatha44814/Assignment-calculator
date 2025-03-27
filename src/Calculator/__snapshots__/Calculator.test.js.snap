@@ -9,3 +9,25 @@ exports[`renders Calculate Component Input negative number, show error message w
   </span>
 </DocumentFragment>
 `;
+
+exports[`renders Calculate Component Negative string value should disable the calculate button 1`] = `
+<DocumentFragment>
+  <button
+    class="calculate"
+    disabled=""
+  >
+    Calculate
+  </button>
+</DocumentFragment>
+`;
+
+exports[`renders Calculate Component Negative value should disable the calculate button 1`] = `
+<DocumentFragment>
+  <button
+    class="calculate"
+    disabled=""
+  >
+    Calculate
+  </button>
+</DocumentFragment>
+`;

@@ -72,4 +72,16 @@ describe("renders Calculate Component", () => {
     expect(asFragment()).toBeTruthy();
     expect(asFragment()).toMatchSnapshot();
   });
+
+  it("Negative string value should disable the calculate button", () => {
+    const { getByText, asFragment } = render(
+      <button className="calculate" disabled={error}>
+        Calculate
+      </button>
+    );
+    expect(asFragment()).toHaveTextContent("Calculate");
+    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toBeTruthy();
+    expect(getByText("Calculate")).toBeDisabled();
+  });
 });
