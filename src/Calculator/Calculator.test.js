@@ -1,7 +1,16 @@
-import { act, cleanup, fireEvent, render, screen } from "@testing-library/react";
+import {
+  act,
+  cleanup,
+  fireEvent,
+  render,
+  screen,
+} from "@testing-library/react";
 import CalculatorPage from "../CalculatorElement/CalculatorElement";
 
 afterEach(cleanup);
+
+const negativeString = "-1,-2";
+const error = true;
 
 describe("renders Calculate Component", () => {
   it("Render Calculate Body Component", () => {
@@ -35,5 +44,20 @@ describe("renders Calculate Component", () => {
     expect(outputStringField).toBeDisabled();
     expect(outputStringField).toHaveValue("6");
     expect(outputStringField).toBeTruthy();
+  });
+
+  it("Input negative number, show error message with -ve numbers", () => {
+    render(<CalculatorPage negativeNumbers={negativeString} error={error} />);
+
+    const inputStringField2 = screen.getByPlaceholderText(
+      "E.G.,//;\\n1;2;3 or 1,2,3"
+    );
+    expect(inputStringField2).toBeInTheDocument();
+    fireEvent.change(inputStringField2, {
+      target: {
+        negativeString,
+      },
+    });
+    expect(inputStringField2).toBeTruthy();
   });
 });
