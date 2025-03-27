@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Assignment-calculator/static/css/main.c02e2c68.css",
+    "main.js": "/Assignment-calculator/static/js/main.8fa932c3.js",
+    "static/js/453.4b98457a.chunk.js": "/Assignment-calculator/static/js/453.4b98457a.chunk.js",
+    "static/media/logo.svg": "/Assignment-calculator/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Assignment-calculator/index.html",
+    "main.c02e2c68.css.map": "/Assignment-calculator/static/css/main.c02e2c68.css.map",
+    "main.8fa932c3.js.map": "/Assignment-calculator/static/js/main.8fa932c3.js.map",
+    "453.4b98457a.chunk.js.map": "/Assignment-calculator/static/js/453.4b98457a.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c02e2c68.css",
+    "static/js/main.8fa932c3.js"
+  ]
+}
