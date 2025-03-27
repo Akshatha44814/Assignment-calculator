@@ -29,5 +29,11 @@ describe("renders Calculate Component", () => {
     expect(buttonEl).toBeTruthy();
     expect(buttonEl).toBeInTheDocument();
     expect(buttonEl).not.toBeDisabled();
+
+    const outputStringField = screen.getByPlaceholderText("Result Output");
+    expect(outputStringField).toBeInTheDocument();
+    expect(outputStringField).toBeDisabled();
+    expect(outputStringField).toHaveValue("6");
+    expect(outputStringField).toBeTruthy();
   });
 });
