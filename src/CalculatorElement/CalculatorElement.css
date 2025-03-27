@@ -1,0 +1,27 @@
+.input {
+    padding: 10px;
+    width:  -webkit-fill-available;
+    border: 1px solid #ececec;
+    border-radius: 2px;
+    margin: 2% 0% 2% 0%;
+  }
+  .resultInput {
+    margin-bottom: 5%;
+  }
+  button[disabled] {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+  }
+  .colorContent {
+    color: red;
+  }
+  .calculate {
+    background: blue;
+    color: white;
+    border: 1px solid #ececec;
+    border-radius: 4px;
+    padding: 10px;
+    width:  -webkit-fill-available;
+  }
+  
