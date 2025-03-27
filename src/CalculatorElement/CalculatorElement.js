@@ -8,35 +8,40 @@ const CalculatorPage = () => {
   const [negativeNumbers, setNegativeNumbers] = useState([]);
 
   const inputMethod = (e) => {
+    setCalculate(e.target.value);
     const inputValue = e.target.value.split("");
     if (inputValue.includes("-")) {
       setError(true);
-      const res = e.target.value.match(/-?\d+/g).filter((a, b) => {
+      const res = e.target.value.match(/-?\d+/g).filter((a) => {
         if (a.includes("-")) {
           return true;
+        } else {
+          return false;
         }
       });
       setNegativeNumbers(res.join(","));
     } else {
       setError(false);
-      const findNumber =
-        inputValue.length > 0 &&
-        inputValue.filter((a, b) => {
-          if (!isNaN(parseInt(a))) {
-            return true;
-          }
-        });
-      const resultOutput =
-        findNumber.length > 0
-          ? findNumber?.reduce((c, d) => {
-              return parseInt(c) + parseInt(d);
-            })
-          : 0;
-      setCalculate(resultOutput);
     }
   };
   const calculateSum = () => {
-    setResult(calculate);
+    const inputValue = calculate.split("");
+    const findNumber =
+      inputValue.length > 0 &&
+      inputValue.filter((a) => {
+        if (!isNaN(parseInt(a))) {
+          return true;
+        } else {
+          return false;
+        }
+      });
+    const resultOutput =
+      findNumber.length > 0
+        ? findNumber?.reduce((c, d) => {
+            return parseInt(c) + parseInt(d);
+          })
+        : 0;
+    setResult(resultOutput);
   };
   return (
     <div className="conatinerPage">
