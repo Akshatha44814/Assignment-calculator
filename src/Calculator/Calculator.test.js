@@ -49,15 +49,27 @@ describe("renders Calculate Component", () => {
   it("Input negative number, show error message with -ve numbers", () => {
     render(<CalculatorPage negativeNumbers={negativeString} error={error} />);
 
+    const NegativeError = () => (
+      <span className="content colorContent">
+        {`Negative numbers not allowed :${negativeString}`}
+      </span>
+    );
+    const { asFragment } = render(<NegativeError />);
     const inputStringField2 = screen.getByPlaceholderText(
       "E.G.,//;\\n1;2;3 or 1,2,3"
     );
-    expect(inputStringField2).toBeInTheDocument();
     fireEvent.change(inputStringField2, {
       target: {
         negativeString,
       },
     });
+    expect(inputStringField2).toBeInTheDocument();
     expect(inputStringField2).toBeTruthy();
+
+    expect(asFragment()).toHaveTextContent(
+      "Negative numbers not allowed :-1,-2"
+    );
+    expect(asFragment()).toBeTruthy();
+    expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -9,13 +9,3 @@ exports[`renders Calculate Component Input negative number, show error message w
   </span>
 </DocumentFragment>
 `;
-
-exports[`renders Calculate Component should render the value of negative number and error message 1`] = `
-<DocumentFragment>
-  <span
-    class="content colorContent"
-  >
-    Negative numbers not allowed :-1,-2
-  </span>
-</DocumentFragment>
-`;
