@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`renders Calculate Component display the format label 1`] = `
+<DocumentFragment>
+  <p>
+    (Format:
+    <span>
+      //[delimiter]
+[numbers]
+    </span>
+    )
+  </p>
+</DocumentFragment>
+`;
+
 exports[`renders Calculate Component render Enter numbers label 1`] = `
 <DocumentFragment>
   <div

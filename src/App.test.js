@@ -26,4 +26,17 @@ describe("renders Calculate Component", () => {
     expect(asFragment()).toMatchSnapshot();
     expect(asFragment()).toBeTruthy();
   });
+  it("display the format label", () => {
+    const Format = () => (
+      <p>
+        {"(Format:"}
+        <span>{"//[delimiter]\n[numbers]"}</span>
+        {")"}
+      </p>
+    );
+    const { asFragment } = render(<Format />);
+    expect(asFragment()).toHaveTextContent("(Format://[delimiter] [numbers])");
+    expect(asFragment()).toMatchSnapshot();
+    expect(asFragment()).toBeTruthy();
+  });
 });
