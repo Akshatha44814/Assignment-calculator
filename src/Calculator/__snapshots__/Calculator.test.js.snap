@@ -20,14 +20,3 @@ exports[`renders Calculate Component Negative string value should disable the ca
   </button>
 </DocumentFragment>
 `;
-
-exports[`renders Calculate Component Negative value should disable the calculate button 1`] = `
-<DocumentFragment>
-  <button
-    class="calculate"
-    disabled=""
-  >
-    Calculate
-  </button>
-</DocumentFragment>
-`;

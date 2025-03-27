@@ -13,6 +13,7 @@ const negativeString = "-1,-2";
 const error = true;
 
 describe("renders Calculate Component", () => {
+  beforeEach(cleanup);
   it("Render Calculate Body Component", () => {
     render(<CalculatorPage />);
   });

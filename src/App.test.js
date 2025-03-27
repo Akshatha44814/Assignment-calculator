@@ -1,12 +1,15 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import App from "./App";
 import Calculator from "./Calculator/Calculator";
+
+afterEach(cleanup);
 
 test("renders App Component", () => {
   render(<App />);
 });
 
 describe("renders Calculate Component", () => {
+  beforeEach(cleanup);
   it("render Calculate component", () => {
     render(<Calculator />);
   });
