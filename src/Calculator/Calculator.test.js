@@ -61,11 +61,12 @@ describe("renders Calculate Component", () => {
     );
     fireEvent.change(inputStringField2, {
       target: {
-        negativeString,
+        value: negativeString,
       },
     });
     expect(inputStringField2).toBeInTheDocument();
     expect(inputStringField2).toBeTruthy();
+    expect(inputStringField2).toHaveValue('-1,-2');
 
     expect(asFragment()).toHaveTextContent(
       "Negative numbers not allowed :-1,-2"
