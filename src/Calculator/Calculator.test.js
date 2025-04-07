@@ -23,13 +23,13 @@ describe("renders Calculate Component", () => {
       "E.G.,//;\\n1;2;3 or 1,2,3"
     );
     expect(inputStringField).toBeInTheDocument();
-    const value = "1,2,3";
+    const value = "1,2,3,1000";
     fireEvent.change(inputStringField, {
       target: {
         value,
       },
     });
-    expect(inputStringField).toHaveValue("1,2,3");
+    expect(inputStringField).toHaveValue("1,2,3,1000");
 
     const calculateSum = jest.fn();
     const { getByText } = render(<button onClick={() => calculateSum()} />);
